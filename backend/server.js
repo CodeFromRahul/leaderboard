@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
 import userRoutes from './routes/userRoutes.js';
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(cors());
@@ -16,4 +17,4 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 app.use('/api', userRoutes);
 
-app.listen(5000, () => console.log('Server running on http://localhost:5000'));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

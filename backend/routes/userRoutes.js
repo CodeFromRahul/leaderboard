@@ -37,4 +37,4 @@ router.get('/history/:userId', async (req, res) => {
   res.json(history);
 });
 
-export default router;  // ✅ Required export
+export default router;  
